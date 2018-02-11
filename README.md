@@ -2,6 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/webpack-tree-dependency.svg)](https://badge.fury.io/js/webpack-tree-dependency)
 
+
 This a [webpack](http://webpack.github.io/) plugin that creates a dependency tree (JSON or HTML)
 
 ## Install
@@ -22,7 +23,8 @@ module.exports = {
 };
 ```
 
-After starting the dev server you will be able to find the output file at: `localhost:port/outputPath/filename.html` (or .json)
+After starting the dev server you will be able to find the output file at: 
+`localhost:port/outputPath/filename.html` (or .json)
 
 ## Options
 
