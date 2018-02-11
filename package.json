@@ -1,6 +1,6 @@
 {
   "name": "webpack-tree-dependency",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Webpack plugin that creates a dependency tree (JSON or HTML)",
   "main": "index.js",
   "scripts": {
