@@ -2,7 +2,7 @@
 
 [![NPM](https://nodei.co/npm/webpack-tree-dependency.png?compact=true)](https://nodei.co/npm/webpack-tree-dependency/)
 
-This a [webpack](http://webpack.github.io/) plugin that creates a dependency tree (JSON or HTML)
+This a [webpack](https://webpack.js.org/) plugin that creates a dependency tree (JSON or HTML)
 
 ## Install
 
