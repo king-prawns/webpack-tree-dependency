@@ -1,0 +1,27 @@
+{
+  "name": "webpack-tree-dependency",
+  "version": "1.0.0",
+  "description": "A Webpack plugin for creating a dependency tree in JSON/HTML format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jking-prawns/webpack-tree-dependency.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "dependency",
+    "tree",
+    "webpack-tree-dependency"
+  ],
+  "author": "Giorgio Gamberoni <giorgio.gamberoni@gmail.com> (https://github.com/king-prawns)",
+  "license": "MIT",
+  "homepage": "https://github.com/king-prawns/webpack-tree-dependency",
+  "devDependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}
