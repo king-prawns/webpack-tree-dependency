@@ -2,7 +2,6 @@
 
 [![npm version](https://badge.fury.io/js/webpack-tree-dependency.svg)](https://badge.fury.io/js/webpack-tree-dependency)
 
-
 This a [webpack](http://webpack.github.io/) plugin that creates a dependency tree (JSON or HTML)
 
 ## Install
