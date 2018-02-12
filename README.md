@@ -32,7 +32,7 @@ After starting the dev server you will be able to find the output file at:
 |:--:|:--:|:-----:|:----------|
 |**`directory`**|`{String}`| `'src'`|path to src folder from project root|
 |**`outputPath`**|`{String}`|`' '`|path to output folder|
-|**`extensions`**|`{Array<String>}`|`['js']`|File extensions to map `|
+|**`extensions`**|`{Array<String>}`|`['js']`|Files to include|
 |**`filename`**|`{String}`|`'tree'`|output filename|
 |**`emitHtml`**|`{Boolean}`|`true`|emit HTML or JSON|
 
