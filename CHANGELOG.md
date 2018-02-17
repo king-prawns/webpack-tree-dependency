@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Removed
 - options: 'outputPath'
+
 Now you will be able to find the output file at:
 `localhost:port/filename.html` (or .json)
 
