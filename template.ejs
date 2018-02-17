@@ -104,7 +104,7 @@
       <ul class="tree">
           <% function createTree(t){ %>
             <li>
-              <span class="<%= t.type %>"><%= t.path %> [<%= t.name %>].[<%= t.type %>] <%= t.recursive ? '<span class="recursive">*</span>' : '' %></span>
+              <span class="<%= t.type %>"><%= t.path %> [<%= t.name %>.<%= t.type %>] <%= t.recursive ? '<span class="recursive">*</span>' : '' %></span>
               <% if(t.children.length > 0) { %>
                 <ul>
                   <% t.children.forEach(function(child){ %>
