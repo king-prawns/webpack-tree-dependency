@@ -8,7 +8,6 @@ function TreeWebpackPlugin (options) {
   this.options = Object.assign({
     directory: 'src',
     extensions: ['js'],
-    outputPath: '',
     filename: 'tree',
     emitHtml: true
   }, options);
@@ -56,27 +55,32 @@ TreeWebpackPlugin.prototype.apply = function (compiler) {
     var dependencyTree = that.createTree(dependencyMap, root);
 
     var source = '';
-    var ext = ''
+    var output = that.options.filename;
     if (that.options.emitHtml) {
-      var tpl = fs.readFileSync(path.resolve(__dirname, 'template.ejs'), 'utf8');
-      source = _.template(tpl)({tree: dependencyTree, extensions: that.options.extensions });
-      ext = '.html';
+      fs.readFile(path.resolve(__dirname, 'template.ejs'), 'utf8', function read(err, tpl) {
+        if (err) {
+          throw new Error('template error: ' + err);
+        }
+
+        source = _.template(tpl)({tree: dependencyTree, extensions: that.options.extensions });
+        output = output + '.html';
+
+        compilation.assets[output] = {
+          source : function () { return source },
+          size   : function () { return source.length }
+        };
+        callback();
+      });
     } else {
       source = JSON.stringify(dependencyTree);
-      ext = '.json';
+      output = output + '.json';
+
+      compilation.assets[output] = {
+        source : function () { return source },
+        size   : function () { return source.length }
+      };
+      callback();
     }
-
-    var output = path.join(
-      that.options.outputPath,
-      that.options.filename + ext
-    );
-
-    compilation.assets[output] = {
-      source : function () { return source },
-      size   : function () { return source.length }
-    };
-
-    callback();
   });
 };
 
