@@ -29,5 +29,5 @@ Now you will be able to find the output file at:
 - First Release 🚀
 
 [Unreleased]: https://github.com/king-prawns/webpack-tree-dependency/compare/v1.1.0...HEAD
-[1.1.0]: https://github.com/king-prawns/webpack-tree-dependency/compare/v1.0.1...v1.1.0
+[1.0.1]: https://github.com/king-prawns/webpack-tree-dependency/compare/v1.0.1...v1.1.0
 [1.1.0]: https://github.com/king-prawns/webpack-tree-dependency/compare/v1.0.0...v1.0.1
