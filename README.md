@@ -30,7 +30,7 @@ After starting the dev server you will be able to find the output file at:
 
 |Name|Type|Default|Description|
 |:--:|:--:|:-----:|:----------|
-|**`directory`**|`{String}`| `'src'`|relastive path to src folder|
+|**`directory`**|`{String}`| `'src'`|relative path to src folder|
 |**`extensions`**|`{Array<String>}`|`['js']`|Files to include|
 |**`filename`**|`{String}`|`'tree'`|output filename|
 |**`emitHtml`**|`{Boolean}`|`true`|emit HTML or JSON|
