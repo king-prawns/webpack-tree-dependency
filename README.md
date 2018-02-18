@@ -63,11 +63,17 @@ new TreeWebpackPlugin({
         {
           "type": "js",
           "path": "/components/comp-one/libs",
-          "name": "mylib",
+          "name": "awesome-lib",
           "children": [],
           "recursive": true
         },
-        {},
+        {
+          "type": "html",
+          "path": "/components/comp-one",
+          "name": "template",
+          "children": [],
+          "recursive": false
+        },
         {}
       ],
       "recursive": false
