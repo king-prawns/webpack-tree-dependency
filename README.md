@@ -51,35 +51,35 @@ new TreeWebpackPlugin({
 
 ```json
 {
-  type: "js",
-  path: "root",
-  name: "main",
-  children: [
+  "type": "js",
+  "path": "root",
+  "name": "main",
+  "children": [
     {
-      type: "js",
-      path: "/components/comp-one",
-      name: "index",
-      children: [
+      "type": "js",
+      "path": "/components/comp-one",
+      "name": "index",
+      "children": [
         {
-          type: "js",
-          path: "/components/comp-one/libs",
-          name: "mylib",
-          children: [...],
-          recursive: true
+          "type": "js",
+          "path": "/components/comp-one/libs",
+          "name": "mylib",
+          "children": [],
+          "recursive": true
         },
-        {...},
-        {...}
+        {},
+        {}
       ],
-      recursive: false
+      "recursive": false
     },
     {
-      type: "js",
-      path: "/components/comp-two",
-      name: "index",
-      children: [...],
-      recursive: false
+      "type": "js",
+      "path": "/components/comp-two",
+      "name": "index",
+      "children": [],
+      "recursive": false
     }
   ],
-  recursive: false
+  "recursive": false
 }
 ```
