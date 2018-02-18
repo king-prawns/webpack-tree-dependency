@@ -2,7 +2,7 @@
 
 [![NPM](https://nodei.co/npm/webpack-tree-dependency.png?compact=true)](https://nodei.co/npm/webpack-tree-dependency/)
 
-This a [webpack](https://webpack.js.org/) plugin that creates a dependency tree (JSON or HTML)
+This a [webpack](https://webpack.js.org/) plugin that creates a dependency tree.
 
 ## Install
 
@@ -30,7 +30,7 @@ After starting the dev server you will be able to find the output file at:
 
 |Name|Type|Default|Description|
 |:--:|:--:|:-----:|:----------|
-|**`directory`**|`{String}`| `'src'`|path to src folder from project root|
+|**`directory`**|`{String}`| `'src'`|relastive path to src folder|
 |**`extensions`**|`{Array<String>}`|`['js']`|Files to include|
 |**`filename`**|`{String}`|`'tree'`|output filename|
 |**`emitHtml`**|`{Boolean}`|`true`|emit HTML or JSON|
@@ -38,9 +38,48 @@ After starting the dev server you will be able to find the output file at:
 
 ```js
 new TreeWebpackPlugin({
-    directory: 'path/to/folder',
+    directory: 'path/to/src',
     extensions: ['js', 'html'],
     filename: 'map',
     emitHtml: true
 })
+```
+
+## Example
+
+**.json**
+
+```json
+{
+  type: "js",
+  path: "root",
+  name: "main",
+  children: [
+    {
+      type: "js",
+      path: "/components/comp-one",
+      name: "index",
+      children: [
+        {
+          type: "js",
+          path: "/components/comp-one/libs",
+          name: "mylib",
+          children: [...],
+          recursive: true
+        },
+        {...},
+        {...}
+      ],
+      recursive: false
+    },
+    {
+      type: "js",
+      path: "/components/comp-two",
+      name: "index",
+      children: [...],
+      recursive: false
+    }
+  ],
+  recursive: false
+}
 ```
